@@ -10,6 +10,8 @@ fiona = "*"
 shapely = "*"
 pyproj = "*"
 psycopg2 = "*"
+requests = "*"
+geopy = "*"
 
 [requires]
 python_version = "3.7"
