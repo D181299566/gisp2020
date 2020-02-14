@@ -37,4 +37,7 @@ import distutils
 if os.name == 'nt':
     from distutils.sysconfig import get_python_lib
     os.environ["PATH"] += os.pathsep + get_python_lib() + "\\osgeo"
-    os.environ["PROJ_LIB"] += os.pathsep + get_python_lib() + "\\osgeo\\data\\proj"
+    if "PROJ_LIB" not in os.environ:
+        os.environ["PROJ_LIB"] = get_python_lib() + "\\osgeo\\data\\proj"
+    else:
+        os.environ["PROJ_LIB"] += os.pathsep + get_python_lib() + "\\osgeo\\data\\proj"
