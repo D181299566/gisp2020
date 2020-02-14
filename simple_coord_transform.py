@@ -1,14 +1,16 @@
-# import gdal_workaround
+import gdal_workaround
 import pyproj
-from fiona.crs import from_epsg
+import generic_useful_parameters as gup
 
-lat = 53.0
-lon = -8.5
+lat = 53.5
+lon = -8.0
 
-WGS84  = pyproj.Proj(from_epsg(4326))
-IRISH_GRID = pyproj.Proj(from_epsg(29902))
+easting = 200000
+northing = 250000
 
-x,y = pyproj.transform(WGS84, IRISH_GRID, lon, lat)
-
+x,y = pyproj.transform(gup.WGS84, gup.TM75, lon, lat)
 print("Turned Lat: {}, Lon: {} into IG Easting: {}, Northing: {}".format(lat, lon, x, y))
+
+x,y = pyproj.transform(gup.TM75, gup.WGS84, easting, northing)
+print("Turned IG Easting: {}, Northing: {} into Lon: {}, Lat: {}".format(easting, northing, x, y))
 

@@ -14,9 +14,13 @@ try:
     from fiona.crs import from_epsg
     import pyproj
 
-    if os.name == 'nt':
+    try:
         from osgeo import ogr
         from osgeo import gdal
+    except ImportError as e:
+        print(f"Bad Import: {e}\nCould be a problem with GDAL or PyGDAL")
+    except Exception as e:
+        print(f"Something bad happened: {e}")
 
     print("Didn't see any import errors")
 
