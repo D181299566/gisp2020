@@ -9,7 +9,7 @@ import os, sys, struct
 
 if os.name != "nt":
     print("You are not running MS Windows. This check is relevant to MS Windows machines only.")
-    # quit(0)
+    quit(0)
 
 LIBRARIES = {
     "GDAL": "3.0.4",
