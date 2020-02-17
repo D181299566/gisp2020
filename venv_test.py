@@ -5,11 +5,11 @@ You can use this file to test if your standard GIS-related imports work.
 try:
     import os
     import gdal_workaround
-    import turtle as t
+    # import turtle as t
     from shapely.geometry import mapping
     from shapely.wkt import loads
-    import psycopg2
-    import psycopg2.extras
+    # import psycopg2
+    # import psycopg2.extras
     import fiona
     from fiona.crs import from_epsg
     import pyproj
