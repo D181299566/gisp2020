@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-""".
+"""
 GDAL is an important library for GIS programming. Basically you can do very little in GIS without it as many of the key
 libraries such as Fiona, Shapely and Pyproj depend on it. GDAL is written in C++ and is known to be tricky to install
 and use with Python. Python and C/C++ generally play well together but, in my experience, GDAL is an exception to this.
