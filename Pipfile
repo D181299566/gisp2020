@@ -12,6 +12,7 @@ pyproj = "*"
 psycopg2 = "*"
 requests = "*"
 geopy = "*"
+httplib2 = "*"
 
 [requires]
 python_version = "3.7"
