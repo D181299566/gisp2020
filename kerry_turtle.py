@@ -1,7 +1,7 @@
 import turtle as t
 from shapely.geometry import mapping
 from shapely.wkt import loads
-import read_from_file_or_net as rfn
+import utilities.read_from_file_or_net as rfn
 import generic_useful_parameters as gp
 
 
