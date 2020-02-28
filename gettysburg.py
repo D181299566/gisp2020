@@ -38,6 +38,7 @@ def parse_text(speech, stopwords):
     return cleaned_speech, unique_words, word_count
 
 
+
 def try_net_version():
     """
     Tasks:
